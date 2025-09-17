@@ -7,5 +7,5 @@ RUN apk add --no-cache bash rsync zstd tar curl ca-certificates \
 COPY backup.sh /usr/local/bin/backup.sh
 RUN chmod +x /usr/local/bin/backup.sh
 
-ENTRYPOINT ["/usr/local/bin/backup.sh"]
-
+# ENTRYPOINT ["/usr/local/bin/backup.sh"]
+CMD ["tail", "-f", "/dev/null"]
